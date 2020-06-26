@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Languages</title>
+    <link href="EachandThis.css" type="text/css" rel="stylesheet">
+    <script src="handlebars.min.js"></script>
+    <script id="languagesTemp" type="text/x-handlebars-template">
+	    {{#each languages}}
+            <div class="card">
+            {{#if this.modern}} <!--IF languages.modern is truthy-->
+                <p>I should learn {{this.name}}.</p>
+            {{else}} <!--ELSE or IF FALSY-->
+                <p>When I have time, I'll learn {{this.name}}.</p> <!--languages.name-->
+            {{/if}}
+            </div>
+        {{/each}}
+    </script>
+  </head>
+  <body>
+    <h1>
+      Thoughts on Languages:
+    </h1>
+    <div id="goals">
+    </div>
+  	<script src="Each and This Expressions.js" type="text/javascript"></script>  
+  </body>
+</html>
